@@ -2,7 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-app: 20, 20, 20;
+  /* Primary color */
+  --primary-55: 255, 209, 26;
+  --primary-60: 255, 214, 51;
+  --primary-70: 255, 224, 102;
+  --primary-80: 255, 235, 153;
+  --primary-90: 255, 245, 204;
+  --primary-95: 255, 250, 229;
+  --primary-97: 255, 252, 240;
+  --primary-99: 255, 254, 250;
+
+  /* Dark color */
+  --dark-08: 20, 20, 20;
+  --dark-10: 26, 26, 26;
+  --dark-15: 38, 38, 38;
+  --dark-20: 51, 51, 51;
+  --dark-25: 64, 64, 64;
+  --dark-30: 77, 77, 77;
+  --dark-35: 89, 89, 89;
+  --dark-40: 102, 102, 102;
+
+  /* Gray color */
+  --gray-50: 126, 126, 129;
+  --gray-60: 152, 152, 154;
+  --gray-70: 179, 179, 179;
+  --gray-80: 204, 204, 204;
+  --gray-90: 228, 228, 231;
+  --gray-95: 241, 241, 243;
+  --gray-97: 247, 247, 248;
+  --gray-99: 252, 252, 253;
+
+  /* Utility */
+  --input: 38, 38, 38;
+  --border: 51, 51, 51;
+  --shadow-input: 38, 38, 38;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
+  background-color: rgb(var(--background-app));
   font-family: var(--font-kumbh-sans);
 }
