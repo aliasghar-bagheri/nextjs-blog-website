@@ -1,0 +1,19 @@
+# Dependencies and build directories
+node_modules/
+dist/
+build/
+.next/
+
+
+# Static assets
+public/
+
+# Testing
+test/
+
+
+#Environment variables
+.env*
+
+#Log files
+*.log
