@@ -49,6 +49,9 @@ const config: Config = {
         border: withDefaultOpacity('--border'),
         'shadow-input': withDefaultOpacity('--shadow-input'),
       },
+      borderRadius: {
+        DEFAULT: '6px',
+      },
       fontFamily: {
         inter: ['var(--font-inter)'],
         kumbh: ['var(--font-kumbh-sans)'],
