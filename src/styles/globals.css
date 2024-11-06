@@ -42,7 +42,7 @@
 
 @layer components {
   .btn {
-    @apply rounded font-inter text-sm font-medium transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 md:px-[14px] md:py-[10px];
+    @apply flex items-center justify-center gap-x-1 rounded px-[14px] py-[10px] font-inter text-sm font-medium transition-all duration-200 disabled:pointer-events-none disabled:opacity-50;
   }
   .btn-primary {
     @apply bg-primary-55 text-dark-08 hover:bg-primary-60 hover:shadow-sm hover:shadow-primary-70;
