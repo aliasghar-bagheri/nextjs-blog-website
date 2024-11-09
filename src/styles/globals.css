@@ -50,6 +50,10 @@
   .btn-outline {
     @apply border border-input bg-dark-08 text-gray-60 hover:bg-dark-10 hover:shadow hover:shadow-shadow-input;
   }
+
+  .textField {
+    @apply w-full rounded border-input bg-dark-10 px-4 py-3 font-inter text-sm text-gray-200 outline-none transition-all duration-300 placeholder:text-dark-40 focus:shadow-sm focus:shadow-dark-20 disabled:pointer-events-none disabled:opacity-50;
+  }
 }
 * {
   scroll-behavior: smooth;
