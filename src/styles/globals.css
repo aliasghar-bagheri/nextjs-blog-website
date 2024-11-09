@@ -72,3 +72,9 @@ body {
   background-color: rgb(var(--background-app));
   font-family: var(--font-kumbh-sans);
 }
+
+@layer utilities {
+  .text-error {
+    @apply font-inter text-sm font-medium text-red-500;
+  }
+}
