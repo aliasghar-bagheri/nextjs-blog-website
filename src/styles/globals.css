@@ -58,6 +58,10 @@
   .labelField {
     @apply font-inter text-base font-medium text-white;
   }
+
+  .spinner {
+    @apply inline-block h-6 w-6 animate-spin rounded-full border-r-2 border-t-2 border-dark-25;
+  }
 }
 * {
   scroll-behavior: smooth;
