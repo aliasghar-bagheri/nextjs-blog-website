@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { interFont, kumbhSansFont } from '@/constants/localFont';
+import { AuthProvider } from '@/context/auth/AuthProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${interFont.variable} ${kumbhSansFont.variable}`}>
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }
