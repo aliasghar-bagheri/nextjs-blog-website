@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { interFont, kumbhSansFont } from '@/constants/localFont';
+import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from '@/context/auth/AuthProvider';
 
 export const metadata: Metadata = {
@@ -16,7 +17,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${interFont.variable} ${kumbhSansFont.variable}`}>
       <body className={`antialiased`}>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          {children}
+          <Toaster
+            toastOptions={{
+              style: {
+                backgroundColor: 'rgb(var(--dark-10))',
+                color: 'rgb(var(--gray-80))',
+              },
+            }}
+          />
+        </AuthProvider>
       </body>
     </html>
   );

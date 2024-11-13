@@ -7,6 +7,7 @@ import { getCurrentUser } from '@/services/user.service';
 import { I_User } from '@/types';
 import { useRouter } from 'next/navigation';
 import { createContext, ReactNode, useContext, useEffect, useReducer } from 'react';
+import toast from 'react-hot-toast';
 
 type T_AuthAction =
   | { type: 'PENDING' }
@@ -108,10 +109,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     try {
       const user = (await signinWithEmail(userData)) as I_User;
 
+      toast.success('You have successfully logged in');
       dispatch({ type: 'SIGN_IN', payload: user });
 
       router.push('/');
     } catch (error) {
+      toast.error(error?.message);
       dispatch({ type: 'ERROR' });
     }
   };
@@ -122,10 +125,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     try {
       const newUser = (await signupWithEmail(userData)) as I_User;
 
+      toast.success('Your registration was successful');
       dispatch({ type: 'SIGN_UP', payload: newUser });
 
       router.push(MAIN_PAGE_ROUTES.ROOT);
     } catch (error) {
+      toast.error(error?.message);
       dispatch({ type: 'ERROR' });
     }
   };
@@ -134,11 +139,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const signout = async () => {
     try {
       await signoutUser();
+      toast.success('You have successfully logged out');
 
       dispatch({ type: 'SIGN_OUT' });
 
       router.push(MAIN_PAGE_ROUTES.ROOT);
     } catch (error) {
+      toast.error(error?.message);
       dispatch({ type: 'ERROR' });
     }
   };
