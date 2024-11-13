@@ -1,20 +1,21 @@
+import { MAIN_PAGE_ROUTES } from '@/constants/routes';
 import { T_NavLink } from '@/types';
 
 export const mainNavLinks: T_NavLink[] = [
   {
-    path: '/',
+    path: MAIN_PAGE_ROUTES.ROOT,
     label: 'Home',
   },
   {
-    path: '/news',
+    path: MAIN_PAGE_ROUTES.NEWS,
     label: 'News',
   },
   {
-    path: '/podcasts',
+    path: MAIN_PAGE_ROUTES.PODCASTS,
     label: 'Podcasts',
   },
   {
-    path: '/resources',
+    path: MAIN_PAGE_ROUTES.RESOURCES,
     label: 'Resources',
   },
 ];
@@ -24,17 +25,17 @@ export const footerNavLinks: { rootLabel: string; subRoot: T_NavLink[] }[] = [
     rootLabel: 'Home',
     subRoot: [
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Feature',
         isNew: false,
       },
       {
-        path: '/blogs',
+        path: MAIN_PAGE_ROUTES.BLOGS,
         label: 'Blogs',
         isNew: false,
       },
       {
-        path: '/resources',
+        path: MAIN_PAGE_ROUTES.RESOURCES,
         label: 'Resources',
         isNew: true,
       },
@@ -44,12 +45,12 @@ export const footerNavLinks: { rootLabel: string; subRoot: T_NavLink[] }[] = [
         isNew: false,
       },
       {
-        path: '/contact-us',
+        path: MAIN_PAGE_ROUTES.CONTACT_US,
         label: 'Contact Us',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Newsletter',
         isNew: false,
       },
@@ -59,32 +60,32 @@ export const footerNavLinks: { rootLabel: string; subRoot: T_NavLink[] }[] = [
     rootLabel: 'News',
     subRoot: [
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Trending Stories',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Featured Videos',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Technology',
         isNew: true,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Health',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Politics',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Environment',
         isNew: false,
       },
@@ -94,32 +95,32 @@ export const footerNavLinks: { rootLabel: string; subRoot: T_NavLink[] }[] = [
     rootLabel: 'Blogs',
     subRoot: [
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Quantum Computing',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'AI Ethics',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Space Exploration',
         isNew: true,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Biotechnology',
         isNew: true,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Renewable Energy',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Biohacking',
         isNew: false,
       },
@@ -129,22 +130,22 @@ export const footerNavLinks: { rootLabel: string; subRoot: T_NavLink[] }[] = [
     rootLabel: 'Podcasts',
     subRoot: [
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'AI Revolution',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'AI Revolutions',
         isNew: false,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'TechTalk AI',
         isNew: true,
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'AI Convesations',
         isNew: true,
       },
@@ -157,19 +158,19 @@ export const footerResourceLinks: { rootLabel: string; subRoot: T_NavLink[] }[] 
     rootLabel: 'Resources',
     subRoot: [
       {
-        path: '/resources?type=whitepapers',
+        path: `${MAIN_PAGE_ROUTES.RESOURCES}?type=whitepapers`,
         label: 'Whitepapers',
       },
       {
-        path: '/resources?type=ebooks',
+        path: `${MAIN_PAGE_ROUTES.RESOURCES}?type=ebooks`,
         label: 'Ebooks',
       },
       {
-        path: '/resources?type=reports',
+        path: `${MAIN_PAGE_ROUTES.RESOURCES}?type=reports`,
         label: 'Reports',
       },
       {
-        path: '/',
+        path: MAIN_PAGE_ROUTES.ROOT,
         label: 'Reserch Papers',
       },
     ],
